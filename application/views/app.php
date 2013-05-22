@@ -3,7 +3,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Post Client</title>
+<title>Http Client</title>
 <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
 body {
