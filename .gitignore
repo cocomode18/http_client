@@ -1,0 +1,26 @@
+#########ORIGINAL##########
+#user add
+
+
+##########GLOBAL###########
+#codeigniter
+#these files need to be copied when installing application
+application/config/development/*
+application/config/production/*
+application/config/testing/*
+public/index.php
+tmp/*
+
+# Global
+*.swp
+*.swo
+*.swn
+
+# Global/OSX.gitignore
+.DS_Store
+
+# Global/codeigniter
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
