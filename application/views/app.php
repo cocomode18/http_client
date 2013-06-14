@@ -1,4 +1,7 @@
-<?php const FORM_VALUE_COUNT = 5;?>
+<?php
+const FORM_VALUE_COUNT = 5;
+const FILE_UPLOAD_COUNT = 4;
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -71,7 +74,7 @@ function clearElement(element) {
 <div class="row">
 <div class="span12">
 <center>
-<form action="<?php echo base_url();?>" method="post" id="form" accept-charset="utf-8">
+<form action="<?php echo base_url();?>" method="post" id="form" accept-charset="utf-8" enctype="multipart/form-data">
 <div class="input-prepend input-append">
 <span class="add-on">url</span>
 <input class="span6" type="text" id="requestUrl" name="requestUrl" value="<?php if(!empty($post['requestUrl'])) echo $post['requestUrl'];?>" placeholder="http://">
@@ -109,6 +112,18 @@ for($i=0; $i<FORM_VALUE_COUNT; $i++){
 for($i=0; $i<FORM_VALUE_COUNT; $i++){
     echo (!empty($post['headerKey'.$i]))? '<input type="text" id="headerKey'.$i.'" name="headerKey'.$i.'" placeholder="key" value="'.$post['headerKey'.$i].'">' : '<input type="text" id="headerKey'.$i.'" name="headerKey'.$i.'" placeholder="key">';
     echo (!empty($post['headerVal'.$i]))? '<input type="text" id="headerVal'.$i.'" name="headerVal'.$i.'" placeholder="value" value="'.$post['headerVal'.$i].'">' : '<input type="text" id="headerVal'.$i.'" name="headerVal'.$i.'" placeholder="value">';
+}
+?>
+</div>
+</div>
+
+<div class="row">
+<div class="span10 offset2">
+<h4>Send Files</h4>
+<?php
+for ($i=0; $i<FILE_UPLOAD_COUNT; $i++) {
+    echo (!empty($post['upfileKey'.$i]))? '<input type="text" id="upfileKey'.$i.'" name="upfileKey'.$i.'" placeholder="key" value"'.$post['upfileKey'.$i].'">' : '<input type="text" id="upfileKey'.$i.'" name="upfileKey'.$i.'" placeholder="key">';
+    echo '<input type="file" id="upfile'.$i.'" name="upfile'.$i.'" size="30" /><br />';
 }
 ?>
 </div>
