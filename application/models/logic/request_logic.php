@@ -39,7 +39,7 @@ class Request_Logic extends MY_Model
 
                 $config['upload_path'] = './tmp/';
                 $config['allowed_types'] = 'gif|jpg|png';
-                $config['max_size'] = '2048';
+                $config['max_size'] = '0';
                 $config['file_name'] = mt_rand().time().$_FILES["upfile$i"]['name'];
                 $this->load->library('upload', $config);
 

@@ -1,5 +1,5 @@
 <?php
-const FORM_VALUE_COUNT = 5;
+const FORM_VALUE_COUNT = 11;
 const FILE_UPLOAD_COUNT = 4;
 ?>
 <!DOCTYPE html>
